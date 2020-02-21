@@ -1,0 +1,21 @@
+The idea, in plain english:
+
+Read a text file from the user, convert it to a two dimensional array
+
+use the array to instantiate an object called Maze,
+this will contain a list of objects called Paths,
+as well as coordinates for start and finish.
+
+Use 'if' logic and recursion to check surroundings from start,
+and create new Path objects for every possible move forward,
+Invalid moves include:
+  walls
+  out of range coordinates
+  coordinates already contained in the given path
+
+At this point we will have a list of every possible Path
+Paths with a head value equal to the finish coordinates will
+have a boolean value (isValid) set to true.
+
+Of the paths where isValid == true, find the one with
+the lowest 'count'.
