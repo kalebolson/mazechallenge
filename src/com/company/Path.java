@@ -6,7 +6,7 @@ public class Path {
     private static char[][] map;
     private static ArrayList<Path> paths = new ArrayList<Path>(0);
     private char[] directions;
-    ArrayList<Coordinate> coordList = new ArrayList<Coordinate>(0);
+    Coordinate[] coordList = new Coordinate[1];
     Coordinate head;
     boolean isValid;
     int count = 0;
@@ -17,17 +17,18 @@ public class Path {
         Path.map = map;
         paths.add(this);
         directions = new char[]{'S'};
-        coordList.add(start);
+        coordList[0] = start;
         head=start;
         isValid = false;
 
         move();
+        paths.remove(this);
     }
 
     //overriding constructor. This one is intended to be called by the
     //move() method only. It will be called for every valid move in order
     //to create a new path
-    public Path(char[] directions, ArrayList<Coordinate> coordList, Coordinate head, int count){
+    public Path(char[] directions, Coordinate[] coordList, Coordinate head, int count){
         this.count = count+1;
         this.directions = directions;
         this.coordList = coordList;
@@ -53,11 +54,21 @@ public class Path {
             Coordinate newHead = new Coordinate(head.getX(), head.getY()+1);
 
             //Create new coordList for new path
-            ArrayList<Coordinate> newCoordList = new ArrayList<>(0);
-            newCoordList.addAll(coordList);
-            newCoordList.add(newHead);
+            Coordinate[] newCL = new Coordinate[coordList.length+1];
+            for (int i = 0; i<coordList.length; i++){
+                newCL[i] = coordList[i];
+            }
+            newCL[newCL.length-1] = newHead;
 
-            paths.add(new Path(newDirections,newCoordList,newHead,count));
+            //Creating a new path for the intended direction
+            Path p = new Path(newDirections,newCL,newHead,count);
+            paths.add(p);
+
+            //Removing invalid paths from the path list to free up memory
+            if (!p.isValid) {
+                paths.remove(p);
+                p=null;
+            }
         }
 
         //Up
@@ -70,11 +81,18 @@ public class Path {
             Coordinate newHead = new Coordinate(head.getX(), head.getY()-1);
 
             //Create new coordList for new path
-            ArrayList<Coordinate> newCoordList = new ArrayList<>(0);
-            newCoordList.addAll(coordList);
-            newCoordList.add(newHead);
+            Coordinate[] newCL = new Coordinate[coordList.length+1];
+            for (int i = 0; i<coordList.length; i++){
+                newCL[i] = coordList[i];
+            }
+            newCL[newCL.length-1] = newHead;
 
-            paths.add(new Path(newDirections,newCoordList,newHead,count));
+            Path p = new Path(newDirections,newCL,newHead,count);
+            paths.add(p);
+            if (!p.isValid) {
+                paths.remove(p);
+                p=null;
+            }
         }
 
         //Left
@@ -87,11 +105,18 @@ public class Path {
             Coordinate newHead = new Coordinate(head.getX()-1, head.getY());
 
             //Create new coordList for new path
-            ArrayList<Coordinate> newCoordList = new ArrayList<>(0);
-            newCoordList.addAll(coordList);
-            newCoordList.add(newHead);
+            Coordinate[] newCL = new Coordinate[coordList.length+1];
+            for (int i = 0; i<coordList.length; i++){
+                newCL[i] = coordList[i];
+            }
+            newCL[newCL.length-1] = newHead;
 
-            paths.add(new Path(newDirections,newCoordList,newHead,count));
+            Path p = new Path(newDirections,newCL,newHead,count);
+            paths.add(p);
+            if (!p.isValid) {
+                paths.remove(p);
+                p=null;
+            }
         }
 
         //Right
@@ -104,11 +129,18 @@ public class Path {
             Coordinate newHead = new Coordinate(head.getX()+1, head.getY());
 
             //Create new coordList for new path
-            ArrayList<Coordinate> newCoordList = new ArrayList<>(0);
-            newCoordList.addAll(coordList);
-            newCoordList.add(newHead);
+            Coordinate[] newCL = new Coordinate[coordList.length+1];
+            for (int i = 0; i<coordList.length; i++){
+                newCL[i] = coordList[i];
+            }
+            newCL[newCL.length-1] = newHead;
 
-            paths.add(new Path(newDirections,newCoordList,newHead,count));
+            Path p = new Path(newDirections,newCL,newHead,count);
+            paths.add(p);
+            if (!p.isValid) {
+                paths.remove(p);
+                p=null;
+            }
         }
     }
 
@@ -141,4 +173,5 @@ public class Path {
     }
 
     public int getCount(){return count;}
+    public Coordinate[] getCoordList(){return coordList;}
 }

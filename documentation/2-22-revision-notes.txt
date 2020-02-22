@@ -1,0 +1,35 @@
+Notes for revisions made on 2/22:
+
+The goals this weekend are as follows:
+1. Resolve OutOfMemoryError that occurs when compiling the largest maze
+2. Add exception handling
+
+
+1)
+To ensure this error is not simply due to a memory leak, I've closed out 
+all instances of Scanner and BufferedReader after they have completed
+their respective tasks.
+
+I have added a few lines to the path file. Instances of Path now remove
+themselves from the arraylist if they reach the end of their constructor
+and do not end on 'B'.
+If unlinked properly, I believe the garbage collector will reallocate
+their memory locations when it runs out of space. 
+	-After doing this, I am no longer getting the error, however
+	the application is now just sitting. I'm sure it will complete
+	eventually, but after waiting 5 to 10 minutes I decided to try
+	something else.
+
+I am changing the ArrayList 'coordList' to a normal array. Hopefully
+this helps speed up the program, as I imagine instantiating a new
+ArrayList for every Path class is a bad idea.
+	-Ensured the first two mazes still worked after this change,
+	which they do. The application is still getting hung up. I have
+	been running it for 30 minutes and it has not complete. I am 
+	beginning to suspect a logic error of some kind is revealing itself
+	at this scale. Will need to rethink this. 
+
+*****************************************************************************
+
+As a finishing touch for today, I've added a visual representation of the 
+shortest path through the maze to the program's output. 
