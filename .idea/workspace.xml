@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3f7df2f-1ae6-4822-b20c-d41f997a9747" name="Default Changelist" comment="" />
+    <list default="true" id="f3f7df2f-1ae6-4822-b20c-d41f997a9747" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/revision-notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze-problem-idea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/maze-problem-idea.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazechallengeUML.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/mazechallengeUML.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/MazeReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/MazeReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeChallenge/com/company/Path.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MazeReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MazeReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Path.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -25,6 +40,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -65,45 +85,65 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="716" y="243" width="544" height="592" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582217476789" />
-    <state width="1807" height="287" key="GridCell.Tab.0.bottom" timestamp="1582300788543">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="287" key="GridCell.Tab.0.bottom/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582300788543" />
-    <state width="1807" height="287" key="GridCell.Tab.0.center" timestamp="1582300788543">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="287" key="GridCell.Tab.0.center/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582300788543" />
-    <state width="1807" height="287" key="GridCell.Tab.0.left" timestamp="1582300788543">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="287" key="GridCell.Tab.0.left/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582300788543" />
-    <state width="1807" height="287" key="GridCell.Tab.0.right" timestamp="1582300788543">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="287" key="GridCell.Tab.0.right/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582300788543" />
-    <state width="1807" height="354" key="GridCell.Tab.1.bottom" timestamp="1582229947170">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="354" key="GridCell.Tab.1.bottom/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582229947170" />
-    <state width="1807" height="354" key="GridCell.Tab.1.center" timestamp="1582229947170">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="354" key="GridCell.Tab.1.center/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582229947170" />
-    <state width="1807" height="354" key="GridCell.Tab.1.left" timestamp="1582229947170">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="354" key="GridCell.Tab.1.left/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582229947170" />
-    <state width="1807" height="354" key="GridCell.Tab.1.right" timestamp="1582229947170">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582406006839">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582406006839" />
     <state width="1807" height="354" key="GridCell.Tab.1.right/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582229947170" />
-    <state x="2536" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1582213282812">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="1417" y="-727" key="com.intellij.ide.util.TipDialog" timestamp="1582390977117">
+      <screen x="801" y="-1080" width="1920" height="1040" />
     </state>
+    <state x="1417" y="-727" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/801.-1080.1920.1040/2721.-1080.1920.1040@801.-1080.1920.1040" timestamp="1582390977117" />
     <state x="2536" y="367" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582213282812" />
     <state x="660" y="332" width="657" height="413" key="git4idea.merge.GitPullDialog" timestamp="1582492079701">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="660" y="332" width="657" height="413" key="git4idea.merge.GitPullDialog/1920.0.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1582492079701" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Path.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

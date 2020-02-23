@@ -10,34 +10,40 @@ public class Main {
         String location;
         Maze maze;
         ArrayList<Path> paths;
-        ArrayList<Path> validPaths = new ArrayList<>(0);
         Path shortestPath;
+        char [][] map;
+        Coordinate[] coordinates;
 
         try {
             System.out.println("Enter file location");
             location = sc.nextLine();
             maze = new Maze(location);
+            sc.close();
 
-            //printing to test reader function
+            //Now to retrieve the paths and compile a list of which ones are valid
+            paths = Path.getPaths();
+
+            //Scanning valid paths for the shortest one
+            shortestPath = paths.get(0);
+            for (Path p : paths){
+                if (p.getCount()<shortestPath.getCount())
+                    shortestPath = p;
+            }
+
+            //Filling in visual representation of shortest path
+            map = maze.getMap();
+            coordinates = shortestPath.getCoordList();
+            for (Coordinate c : coordinates){
+                if (map[c.getY()][c.getX()] != 'A' && map[c.getY()][c.getX()] != 'B')
+                    map[c.getY()][c.getX()] = '@';
+            }
+
+            //Displaying result
             System.out.println(maze);
+            System.out.println("Shortest path count is: "+shortestPath.getCount());
+
         } catch (FileNotFoundException e){
             System.out.println("Invalid location");
         }
-
-        //Now to retrieve the paths and compile a list of which ones are valid
-        paths = Path.getPaths();
-        for(Path p : paths){
-            if (p.isValid)
-                validPaths.add(p);
-        }
-
-        //Scanning valid paths for the shortest one
-        shortestPath = validPaths.get(0);
-        for (Path p : validPaths){
-            if (p.getCount()<shortestPath.getCount())
-                shortestPath = p;
-        }
-
-        System.out.println("Shortest path count is: "+shortestPath.getCount());
     }
 }

@@ -19,10 +19,11 @@ public class MazeReader {
                 lineCount++;
                 currentLine = br.readLine();
             }
-
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         //now that I have the size of the maze, I can instantiate the map
         map = new char[lineCount][lineWidth];
