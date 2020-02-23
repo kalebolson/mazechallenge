@@ -9,7 +9,7 @@ public class Maze {
     Coordinate finish;
     MazeReader mr = new MazeReader();
 
-    public Maze(String fileLocation) throws FileNotFoundException {
+    public Maze(String fileLocation) throws FileNotFoundException, InvalidCharacterException {
         //using file location to create map of the maze
         //the map is a 2d array
         map = mr.read(fileLocation);

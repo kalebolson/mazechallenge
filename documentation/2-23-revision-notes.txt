@@ -1,0 +1,38 @@
+Today I will be adding some exception handling. There
+are five potential situations I am going to address:
+1. User enters invalid file name
+2. User attempts to run a text file that does not
+   meet program's guidelines
+3. User has created a maze that does not contain a 
+   valid path from 'A' to 'B'.
+4. The program runs out of heap space and throws
+   an OutOfMemoryError
+5. A general catch all over the whole program.
+
+1. The first exception I would like to address is the 
+'FileNotFoundException' in 'Main.java'. Before, it 
+would simply print "Invalid location", then terminate 
+the program. I've implemented a loop so the user can
+run the program again. This has also come with the 
+added feature of rerunning the program if it is run
+successfully.  
+
+2. I've added logic to 'MazeReader.java' that will
+throw an InvalidCharacterException. This exception
+will be caught in 'Main.java' and will print out
+a description of the issue.
+
+3. I've added a couple of lines to 'Main.java' that 
+will catch a 'NoValidPathException' in the instance
+that the program cannot find a way from A to B. 
+
+
+4. If OutOfMemoryError is thrown, it will be caught,
+and the system will let the user know. I don't believe
+this will be possible any longer, as I have the Paths
+automatically deleting themselves when they are no 
+longer needed. However, I am putting a catch in just in
+case. 
+
+5. Added a catch-all for any other exceptions. It simply
+prints a line stating that something has gone wrong.

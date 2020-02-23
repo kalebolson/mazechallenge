@@ -1,14 +1,16 @@
 package com.company;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class MazeReader {
     char[][] map;
+    char c; //current character while iterating and writing array
     int lineCount = 0; //y axis size
     int lineWidth = 0; //x axis size
 
-    public char[][] read(String fileLocation) throws FileNotFoundException{
+    public char[][] read(String fileLocation) throws FileNotFoundException, InvalidCharacterException {
 
         //using BufferedReader to get x and y counts for map
         BufferedReader br = new BufferedReader(new FileReader(fileLocation));
@@ -35,7 +37,15 @@ public class MazeReader {
         while (input.hasNextLine()){
             currLineString = input.nextLine();
             for (int i=0; i<lineWidth; i++){
-                map[currLineCount][i]=currLineString.charAt(i);
+                c = currLineString.charAt(i);
+                map[currLineCount][i]=c;
+
+                /*This if statement will test to make sure each
+                character entered is valid.*/
+                if (c!='A' && c!='B' && c!='.' && c!='#'){
+                    throw new InvalidCharacterException("One or more of the characters in this file was not recognized" +
+                            "by this program. Valid characters are 'A', 'B', '.', and '#'");
+                }
             }
 
             currLineCount++;
