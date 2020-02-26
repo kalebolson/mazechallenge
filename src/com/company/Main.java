@@ -19,9 +19,15 @@ public class Main {
             try {
                 System.out.println("Enter file location");
                 location = sc.nextLine();
+
+                //instantiating a maze is essentially what 'runs' the algorithm
+                //the first path is built within the first constructor, and
+                //subsequent paths occur within the constructors of paths.
+                //It will not stop instantiating new paths until it has checked
+                //all possible paths.
                 maze = new Maze(location);
 
-                //Now to retrieve the paths and compile a list of which ones are valid
+                //Now to retrieve the paths. Invalid paths have removed themselves from the list
                 paths = Path.getPaths();
 
                 if (paths.size() == 0){
@@ -47,6 +53,9 @@ public class Main {
                 System.out.println(maze);
                 System.out.println("Shortest path count is: " + shortestPath.getCount());
 
+                //clearing paths list to fix issue where rerunning app keeps shortest previous path
+                paths.removeAll(paths);
+
             } catch (FileNotFoundException e) {
                 System.out.println("Unable to locate the specified file. \n" +
                         "please check the file name, and ensure it exists within \n" +
@@ -60,6 +69,7 @@ public class Main {
                 System.gc();
             } catch (Exception e){
                 System.out.println("Something has gone wrong.");
+                e.printStackTrace();
             }
             finally {
                 //Asking the user if they would like to run the program again
