@@ -24,7 +24,7 @@ public class Maze {
             }
         }
 
-        //testing start and finish detectors
+        //start and finish detectors
         assert start != null;
         assert finish != null;
         System.out.println("Starting coordinates: "+Arrays.toString(start.getCoord()) +"\nFinishing coordinates: "+ Arrays.toString(finish.getCoord()));

@@ -30,7 +30,7 @@ public class Main {
                 //Now to retrieve the paths. Invalid paths have removed themselves from the list
                 paths = Path.getPaths();
 
-                if (paths.size() == 0){
+                if (paths.size() == 0) {
                     throw new NoValidPathException("Unable to find a valid path from 'A' to 'B'");
                 }
 
@@ -67,6 +67,9 @@ public class Main {
                 System.out.println("The program has run out of memory, and is unable to \n" +
                         "process this maze");
                 System.gc();
+            } catch (AssertionError e){
+              System.out.println("System was likely unable to detect Start/Finish points. \n" +
+                      "Please ensure your maze contains start point 'A' and finishing point 'B'.");
             } catch (Exception e){
                 System.out.println("Something has gone wrong.");
                 e.printStackTrace();
